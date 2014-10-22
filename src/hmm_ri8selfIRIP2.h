@@ -21,12 +21,12 @@
  * 
  * C functions for the R/qtl package
  *
- * Contains: init_ri8selfIRIP1, emit_ri8selfIRIP1, step_ri8selfIRIP1, step_special_ri8selfIRIP1, 
- *           calc_genoprob_ri8selfIRIP1, calc_genoprob_special_ri8selfIRIP1,
- *           argmax_geno_ri8selfIRIP1, sim_geno_ri8selfIRIP1,
- *           est_map_ri8selfIRIP1, nrec2_ri8selfIRIP1, logprec_ri8selfIRIP1, est_rf_ri8selfIRIP1,
- *           marker_loglik_ri8selfIRIP1, calc_pairprob_ri8selfIRIP1, 
- *           errorlod_ri8selfIRIP1, calc_errorlod_ri8selfIRIP1
+ * Contains: init_ri8selfIRIP2, emit_ri8selfIRIP2, step_ri8selfIRIP2, step_special_ri8selfIRIP2, 
+ *           calc_genoprob_ri8selfIRIP2, calc_genoprob_special_ri8selfIRIP2,
+ *           argmax_geno_ri8selfIRIP2, sim_geno_ri8selfIRIP2,
+ *           est_map_ri8selfIRIP2, nrec2_ri8selfIRIP2, logprec_ri8selfIRIP2, est_rf_ri8selfIRIP2,
+ *           marker_loglik_ri8selfIRIP2, calc_pairprob_ri8selfIRIP2, 
+ *           errorlod_ri8selfIRIP2, calc_errorlod_ri8selfIRIP2
  *
  * These are the init, emit, and step functions plus
  * all of the hmm wrappers for 8-way RIL by selfing.
@@ -37,47 +37,47 @@
  *
  **********************************************************************/
 
-double init_ri8selfIRIP1(int true_gen, int *cross_scheme);
+double init_ri8selfIRIP2(int true_gen, int *cross_scheme);
 
-double emit_ri8selfIRIP1(int obs_gen, int true_gen, double error_prob, int *cross_scheme);
+double emit_ri8selfIRIP2(int obs_gen, int true_gen, double error_prob, int *cross_scheme);
   
-double step_ri8selfIRIP1(int gen1, int gen2, double rf, double junk, int *cross_scheme);
+double step_ri8selfIRIP2(int gen1, int gen2, double rf, double junk, int *cross_scheme);
 
-void calc_genoprob_ri8selfIRIP1(int *n_ind, int *n_mar, int *geno, 
+void calc_genoprob_ri8selfIRIP2(int *n_ind, int *n_mar, int *geno, 
 			   double *rf, double *error_prob, double *genoprob);
   
-void calc_genoprob_special_ri8selfIRIP1(int *n_ind, int *n_mar, int *geno, 
+void calc_genoprob_special_ri8selfIRIP2(int *n_ind, int *n_mar, int *geno, 
 				   double *rf, double *error_prob, double *genoprob);
 
-void argmax_geno_ri8selfIRIP1(int *n_ind, int *n_pos, int *geno,
+void argmax_geno_ri8selfIRIP2(int *n_ind, int *n_pos, int *geno,
 			 double *rf, double *error_prob, int *argmax);
 
-void sim_geno_ri8selfIRIP1(int *n_ind, int *n_pos, int *n_draws, int *geno, 
+void sim_geno_ri8selfIRIP2(int *n_ind, int *n_pos, int *n_draws, int *geno, 
 		      double *rf, double *error_prob, int *draws);
 
-void est_map_ri8selfIRIP1(int *n_ind, int *n_mar, int *geno, double *rf, 
+void est_map_ri8selfIRIP2(int *n_ind, int *n_mar, int *geno, double *rf, 
 		     double *error_prob, double *loglik, int *maxit, 
 		     double *tol, int *verbose);
 
 /* expected no. recombinants */
-double nrec2_ri8selfIRIP1(int obs1, int obs2, double rf, int *cross_scheme);
+double nrec2_ri8selfIRIP2(int obs1, int obs2, double rf, int *cross_scheme);
 
 /* log [joint probability * 8] */
-double logprec_ri8selfIRIP1(int obs1, int obs2, double rf, int *cross_scheme);
+double logprec_ri8selfIRIP2(int obs1, int obs2, double rf, int *cross_scheme);
 
-void est_rf_ri8selfIRIP1(int *n_ind, int *n_mar, int *geno, double *rf, 
+void est_rf_ri8selfIRIP2(int *n_ind, int *n_mar, int *geno, double *rf, 
 		   int *maxit, double *tol);
 
-void marker_loglik_ri8selfIRIP1(int *n_ind, int *geno,
+void marker_loglik_ri8selfIRIP2(int *n_ind, int *geno,
 			   double *error_prob, double *loglik);
 
-void calc_pairprob_ri8selfIRIP1(int *n_ind, int *n_mar, int *geno, 
+void calc_pairprob_ri8selfIRIP2(int *n_ind, int *n_mar, int *geno, 
 			   double *rf, double *error_prob, 
 			   double *genoprob, double *pairprob);
 
 double errorlod_ri8self(int obs, double *prob, double error_prob);
 
-void calc_errorlod_ri8selfIRIP1(int *n_ind, int *n_mar, int *geno, 
+void calc_errorlod_ri8selfIRIP2(int *n_ind, int *n_mar, int *geno, 
 			   double *error_prob, double *genoprob, 
 			   double *errlod);
 

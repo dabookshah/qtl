@@ -127,9 +127,9 @@ function(cross, step=0, off.end=0, error.prob=0.0001,
         n.gen <- 2
       }
     }
-	else if(type == "ri8selfIRIP1") {
+	else if(type %in% IRIPCrosses) {
 	  one.map <- TRUE
-	  cfunc <- "calc_genoprob_ri8selfIRIP1"
+	  cfunc <- paste0("calc_genoprob_", type)
 	  n.gen <- 8
 	  gen.names <- LETTERS[1:n.gen]
 	}
