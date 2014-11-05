@@ -34,8 +34,8 @@
 ######################################################################
 IRIPCrosses <- c("ri8selfIRIP1", "ri8selfIRIP2")
 readMWril <-
-function(dir, rilfile, founderfile,
-         type=c(IRIPCrosses, "ri4self", "ri4sib", "ri8self", "ri8sib", "bgmagic16"),
+    function(dir, rilfile, founderfile,
+             type=c(IRIPCrosses, "ri4self", "ri4sib", "ri8self", "ri8selfIRIP1", "ri8sib", "bgmagic16"),
          na.strings=c("-","NA"), rotate=FALSE,
          ...)
 {

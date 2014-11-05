@@ -31,7 +31,7 @@
 ######################################################################
 
 calc.genoprob <-
-function(cross, step=0, off.end=0, error.prob=0.0001,
+    function(cross, step=0, off.end=0, error.prob=0.0001,
          map.function=c("haldane","kosambi","c-f","morgan"),
          stepwidth=c("fixed", "variable", "max"))
 {
@@ -240,7 +240,7 @@ function(cross, step=0, off.end=0, error.prob=0.0001,
 ######################################################################
 
 calc.genoprob.special <-
-function(cross, error.prob=0.0001,
+    function(cross, error.prob=0.0001,
          map.function=c("haldane","kosambi","c-f","morgan"))
 {
   if(!any(class(cross) == "cross"))

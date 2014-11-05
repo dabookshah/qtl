@@ -5,9 +5,12 @@
 \.git
 ^\.RData$
 ^\.Rhistory$
+^\.Rprofile$
 ^tests/\.RData$
 ^tests/\.Rhistory$
-inst/docs/Sources/MQM/Figs
-^\.Rprofile$
-inst/docs/Sources/MQM/.Rprofile
-^README$
+inst/doc/Sources/MQM/Figs
+inst/doc/Sources/MQM/\.RData
+inst/doc/Sources/MQM/Sweave.sty
+inst/doc/Sources/MQM/\.Rprofile
+^README.md$
+^\.travis\.yml$

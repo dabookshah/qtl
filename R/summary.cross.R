@@ -25,7 +25,7 @@
 ######################################################################
 
 summary.cross <-
-function(object,...)
+    function(object,...)
 {
   if(!any(class(object) == "cross"))
     stop("Input should have class \"cross\".")
@@ -381,7 +381,7 @@ function(object,...)
 
 
 print.summary.cross <-
-function(x,...)
+    function(x,...)
 {
   print.genotypes <- TRUE
 
@@ -507,7 +507,7 @@ function(x,...)
 
 
 nind <-
-function(object)
+    function(object)
 {
   if(!any(class(object) == "cross"))
     stop("Input should have class \"cross\".")
@@ -520,7 +520,7 @@ function(object)
 }
 
 nchr <-
-function(object)
+    function(object)
 {
   cl <- class(object)
   if(!("cross" %in% cl || "map" %in% cl))
@@ -533,7 +533,7 @@ function(object)
 }
 
 nmar <- 
-function(object)
+    function(object)
 {
   cl <- class(object)
   if(!("cross" %in% cl || "map" %in% cl))
@@ -557,7 +557,7 @@ function(object)
 }
 
 totmar <-
-function(object)
+    function(object)
 {
   cl <- class(object)
   if(!("cross" %in% cl || "map" %in% cl))
@@ -581,7 +581,7 @@ function(object)
 }
 
 nphe <-
-function(object)
+    function(object)
 {
   if(!any(class(object) == "cross"))
     stop("Input should have class \"cross\".")
@@ -591,7 +591,7 @@ function(object)
 
 # count number of missing genotypes for each individual or each marker
 nmissing <-
-function(cross,what=c("ind","mar"))
+    function(cross,what=c("ind","mar"))
 {
   if(!any(class(cross) == "cross"))
     stop("Input should have class \"cross\".")
@@ -621,7 +621,7 @@ function(cross,what=c("ind","mar"))
 
 # like nmissing, but for the opposite value
 ntyped <-
-function(cross, what=c("ind","mar"))
+    function(cross, what=c("ind","mar"))
 {
   if(!any(class(cross) == "cross"))
     stop("Input should have class \"cross\".")
@@ -639,7 +639,7 @@ function(cross, what=c("ind","mar"))
 # to avoid ever printing the entire object, print just a little
 #     warning message and then the summary
 print.cross <-
-function(x, ...)
+    function(x, ...)
 {
   cat("  This is an object of class \"cross\".\n")
   cat("  It is too complex to print, so we provide just this summary.\n")
@@ -650,7 +650,7 @@ function(x, ...)
 
 # get chromosome lengths
 chrlen <-
-function(object)
+    function(object)
 {
   if(!any(class(object) == "map") && !any(class(object) == "cross"))
     stop("Input should have class \"map\" or \"cross\".")
