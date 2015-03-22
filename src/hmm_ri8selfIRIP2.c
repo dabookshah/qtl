@@ -1,6 +1,6 @@
 /**********************************************************************
  * 
- * hmm_ri8selfIRIP.c
+ * hmm_ri8selfIRIP2.c
  * 
  * copyright (c) 2009-2014, Karl W Broman
  *

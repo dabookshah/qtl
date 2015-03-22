@@ -32,10 +32,10 @@
 # separate file for the phenotype data.
 #
 ######################################################################
-IRIPCrosses <- c("ri8selfIRIP1", "ri8selfIRIP2")
+IRIPCrosses <- c("ri8selfIRIP1", "ri8selfIRIP2", "ri8selfIRIP10")
 readMWril <-
     function(dir, rilfile, founderfile,
-             type=c(IRIPCrosses, "ri4self", "ri4sib", "ri8self", "ri8selfIRIP1", "ri8sib", "bgmagic16"),
+             type=c("ri8selfIRIP1", "ri8selfIRIP2", "ri8selfIRIP10", "ri4self", "ri4sib", "ri8self", "ri8sib", "bgmagic16"),
          na.strings=c("-","NA"), rotate=FALSE,
          ...)
 {
