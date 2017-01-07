@@ -35,7 +35,7 @@
 
 readMWril <-
     function(dir, rilfile, founderfile,
-             type=c("ri4self", "ri4sib", "ri8self", "ri8selfIRIP1", "ri8sib", "bgmagic16"),
+             type=c("ri4self", "ri4sib", "ri8self", "ri8selfIRIP1", "ri8selfIRIP2", "ri8selfIRIP3", "ri8sib", "bgmagic16"),
              na.strings=c("-","NA"), rotate=FALSE,
              ...)
 {
@@ -151,7 +151,7 @@ readMWril <-
 
     n.str <- nrow(founder)
 
-    if(type == "ri8selfIRIP1"){
+    if(type == "ri8selfIRIP1" || type == "ri8selfIRIP2" || type == "ri8selfIRIP3"){
     }
     else if(!("cross" %in% names(pheno))) {
         warning("Need a phenotype named \"cross\"; assuming all come from the cross ",
@@ -185,7 +185,7 @@ readMWril <-
     gen[wh] <- missingval
     founder[is.na(founder)] <- missingval
     d <- dim(gen)
-    if(type == "ri8selfIRIP1")
+    if(type == "ri8selfIRIP1" || type == "ri8selfIRIP2" || type == "ri8selfIRIP3")
     {
         gen <-
             .C("R_reviseMWrilNoCross",
@@ -287,7 +287,7 @@ readMWril <-
     if(all(is.na(gen)))
         warning("There is no genotype data!\n")
 
-    if(type != "ri8selfIRIP1")
+    if(type != "ri8selfIRIP1" && type != "ri8selfIRIP2" && type != "ri8selfIRIP3")
     {
         cross$cross <- crosses
     }
