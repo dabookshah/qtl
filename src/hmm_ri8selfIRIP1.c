@@ -163,7 +163,7 @@ double logprec_ri8selfIRIP1(int obs1, int obs2, double rf, int *cross_scheme)
   nr = n1*n2-n12;
 
   /* joint prob for non-rec'ts */
-  rf0 = ((1-rf)*(1-rf)*(1-rf)+(2*rf+1)/8)/ (8*(1+2 * rf));
+  rf0 = ((1-rf)*(1-rf)*(1-rf)+(2*rf)/8)/ (8*(1+2 * rf));
   /* joint prob for recombinants */
   rf1 = (1 - 8 * rf0) / (8*7);
 
